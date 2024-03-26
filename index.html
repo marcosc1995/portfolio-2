@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-testddddddssssdds
-prueba para ver si funciona el push correctamente
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -16,14 +15,15 @@ prueba para ver si funciona el push correctamente
     <header>
       <nav>
         <ul>
-          <li>Intro</li>
-          <li>Projects</li>
-          <li>Tecnology</li>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#tech">Tecnology</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="intro">
       <div>
+        <div id="perfil"></div>
         <h4>Hi, my name is</h4>
         <h1>Marcos Caitano</h1>
         <h2>Front-End Web Developer</h2>
@@ -31,9 +31,27 @@ prueba para ver si funciona el push correctamente
           I’m a software Developer specializing in building and designing
           digital experiences.
         </h3>
+        <div id="contact">
+          <a href=""><img src="img/google.png" alt="linkedin"></a>
+          <a href=""><img src="img/google.png" alt="github"></a>
+          <a href="">Resume</a>
+        </div>
       </div>
     </main>
-    <section>
+    <section id="tech">
+      <h2>Tecnologias que he utilizado</h2>
+      <div>
+        <img class="tech-icon" src="img/google.png" alt="" />
+        <img class="tech-icon" src="img/google.png" alt="" />
+        <img class="tech-icon" src="img/google.png" alt="" />
+        <img class="tech-icon" src="img/google.png" alt="" />
+        <img class="tech-icon" src="img/google.png" alt="" />
+        <img class="tech-icon" src="img/google.png" alt="" />
+        <img class="tech-icon" src="img/google.png" alt="" />
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
       <div class="project-card">
         <div>
           <h2>Project title</h2>
@@ -56,6 +74,10 @@ prueba para ver si funciona el push correctamente
         <div>
           <h2>Project title</h2>
           <h3>project description</h3>
+          <div>
+            <a href="ir al projecto">ir al projecto</a>
+            <a href="link al repositorio">link al repositorio</a>
+          </div>
         </div>
         <div>
           <img src="img/ShotToDo.png" alt="" srcset="" />

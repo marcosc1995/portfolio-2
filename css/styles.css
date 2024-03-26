@@ -1,5 +1,6 @@
 body {
   background-color: whitesmoke;
+  font-family: sans-serif;
 }
 
 nav ul {
@@ -15,20 +16,56 @@ nav ul li {
   display: flex;
   align-items: center;
   color: rgb(81, 180, 81);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  nav ul {
+    margin-right: 10px;
+  }
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
+  margin-bottom: 250px;
 }
 main div {
   width: 600px;
 }
+main div #perfil {
+  width: 150px;
+  height: 150px;
+  background-image: url(/img/perfil.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+main div #contact {
+  display: flex;
+  justify-content: end;
+  margin-top: 100px;
+}
+main div #contact a {
+  text-decoration: none;
+  margin: 10px;
+}
+main div #contact a img {
+  width: 40px;
+  height: 40px;
+}
+main div #contact a:nth-of-type(3) {
+  padding: 10px;
+  border: 1px solid black;
+}
+@media screen and (max-width: 600px) {
+  main div #contact {
+    justify-content: center;
+  }
+}
 main div h4 {
-  margin: auto;
   color: rgb(112, 175, 112);
 }
 main div h1 {
@@ -36,33 +73,104 @@ main div h1 {
   color: rgb(81, 189, 81);
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  main div {
+    text-align: center;
+    width: auto;
+  }
+  main div #perfil {
+    margin: auto;
+  }
+  main div h1 {
+    font-size: 44px;
+  }
+}
 
-section {
+#tech {
+  margin-top: 350px;
+}
+#tech h2 {
   border: 1px solid red;
+  text-align: center;
+}
+#tech div {
+  border: 1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#tech div img {
+  width: 60px;
+  height: 60px;
+  margin: 0 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-top: 100px;
 }
 
 .project-card {
-  border: 1px solid blue;
   margin: 10px;
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  .project-card {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.project-card div {
+  text-align: center;
+}
+.project-card div h2 {
+  color: red;
+  margin: 60px 0 50px 0;
+}
+.project-card div div {
+  margin: 50px 0;
+}
+.project-card div div a {
+  border: 1px solid black;
+  text-decoration: none;
+  color: red;
+  padding: 10px;
+  border-radius: 25px;
 }
 .project-card div:nth-of-type(2) {
   margin: 10px;
   display: flex;
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 600px) {
+  .project-card div:nth-of-type(2) {
+    flex-direction: column;
+  }
+}
 .project-card div:nth-of-type(2) img {
   width: 200px;
 }
-.project-card ul {
+.project-card div:nth-of-type(2) ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
   list-style: none;
+  padding: 0;
 }
-.project-card ul li {
+@media screen and (max-width: 600px) {
+  .project-card div:nth-of-type(2) ul {
+    flex-direction: row;
+  }
+}
+.project-card div:nth-of-type(2) ul li {
   border: 1px solid green;
   margin: 5px;
+  background-color: green;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  padding: 3px;
+  width: 70px;
 }/*# sourceMappingURL=styles.css.map */
