@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: #ecf39e;
   font-family: sans-serif;
 }
 
@@ -12,16 +12,28 @@ nav ul {
 }
 nav ul li {
   height: 50px;
-  margin: 5px;
+  margin: 20px;
   display: flex;
   align-items: center;
-  color: rgb(81, 180, 81);
   font-size: 18px;
   font-weight: bold;
+  transition-duration: 0.2s;
+}
+nav ul li a {
+  color: #31572c;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #90a955;
+  scale: 1.1;
 }
 @media screen and (max-width: 600px) {
   nav ul {
     margin-right: 10px;
+    justify-content: end;
+  }
+  nav ul li {
+    margin: 10px;
   }
 }
 
@@ -31,6 +43,7 @@ main {
   align-items: center;
   margin-top: 150px;
   margin-bottom: 250px;
+  color: #31572c;
 }
 main div {
   width: 600px;
@@ -51,6 +64,10 @@ main div #contact {
 main div #contact a {
   text-decoration: none;
   margin: 10px;
+  transition-duration: 0.3s;
+}
+main div #contact a:hover {
+  scale: 1.2;
 }
 main div #contact a img {
   width: 40px;
@@ -58,7 +75,13 @@ main div #contact a img {
 }
 main div #contact a:nth-of-type(3) {
   padding: 10px;
-  border: 1px solid black;
+  color: #ecf39e;
+  background-color: #31572c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
 }
 @media screen and (max-width: 600px) {
   main div #contact {
@@ -66,11 +89,11 @@ main div #contact a:nth-of-type(3) {
   }
 }
 main div h4 {
-  color: rgb(112, 175, 112);
+  color: #90a955;
 }
 main div h1 {
   font-size: 60px;
-  color: rgb(81, 189, 81);
+  color: #132a13;
   margin: 0 auto;
 }
 @media screen and (max-width: 600px) {
