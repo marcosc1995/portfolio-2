@@ -1,5 +1,6 @@
 body {
-  background-color: whitesmoke;
+  background-color: #ecf39e;
+  font-family: sans-serif;
 }
 
 nav ul {
@@ -11,58 +12,242 @@ nav ul {
 }
 nav ul li {
   height: 50px;
-  margin: 5px;
+  margin: 20px;
   display: flex;
   align-items: center;
-  color: rgb(81, 180, 81);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
+}
+nav ul li a {
+  color: #31572c;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+nav ul li a:hover {
+  color: #90a955;
+  scale: 1.1;
+  text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  nav ul {
+    margin-right: 10px;
+    justify-content: end;
+  }
+  nav ul li {
+    margin: 10px;
+  }
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
+  margin-bottom: 250px;
+  color: #31572c;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 main div {
   width: 600px;
 }
+main div #perfil {
+  width: 150px;
+  height: 150px;
+  background-image: url(/img/perfil.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+main div #contact {
+  display: flex;
+  justify-content: end;
+  margin-top: 100px;
+}
+main div #contact a {
+  text-decoration: none;
+  margin: 10px;
+  transition-duration: 0.3s;
+}
+main div #contact a:hover {
+  scale: 1.2;
+}
+main div #contact a img {
+  width: 40px;
+  height: 40px;
+}
+main div #contact a:nth-of-type(3) {
+  padding: 10px;
+  color: #ecf39e;
+  background-color: #31572c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  main div #contact {
+    justify-content: center;
+  }
+}
 main div h4 {
-  margin: auto;
-  color: rgb(112, 175, 112);
+  color: #90a955;
 }
 main div h1 {
   font-size: 60px;
-  color: rgb(81, 189, 81);
+  color: #132a13;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  main div {
+    text-align: center;
+    width: auto;
+  }
+  main div #perfil {
+    margin: auto;
+  }
+  main div h1 {
+    font-size: 44px;
+  }
+}
 
-section {
-  border: 1px solid red;
+#tech {
+  margin-top: 350px;
+}
+#tech h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 50px;
+  color: #31572c;
+}
+#tech div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+#tech div img {
+  width: 50px;
+  height: 50px;
+  margin: 20px 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-top: 50px;
+  color: #31572c;
+  font-size: 34px;
 }
 
 .project-card {
-  border: 1px solid blue;
-  margin: 10px;
+  background-color: #f1f6b6;
+  border-radius: 25px;
+  margin: 30px 10px;
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  .project-card {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.project-card div {
+  text-align: center;
+}
+.project-card div h3 {
+  font-size: 18px;
+  width: 400px;
+  color: #90a955;
+}
+@media screen and (max-width: 600px) {
+  .project-card div h3 {
+    width: auto;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+.project-card div div {
+  margin: 50px 0;
+}
+.project-card div div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 15px auto;
+  padding: 10px;
+  color: #ecf39e;
+  background-color: #31572c;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  position: relative;
+  transition-duration: 0.3s;
+}
+.project-card div div a:hover {
+  scale: 1.1;
+}
+.project-card div div a:hover img {
+  right: 15px;
+  transform: rotate(30deg);
+}
+.project-card div div a img {
+  position: absolute;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.3s;
 }
 .project-card div:nth-of-type(2) {
   margin: 10px;
   display: flex;
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 600px) {
+  .project-card div:nth-of-type(2) {
+    flex-direction: column;
+  }
+}
 .project-card div:nth-of-type(2) img {
   width: 200px;
 }
-.project-card ul {
+.project-card div:nth-of-type(2) ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
   list-style: none;
+  padding: 0;
 }
-.project-card ul li {
-  border: 1px solid green;
+@media screen and (max-width: 600px) {
+  .project-card div:nth-of-type(2) ul {
+    flex-direction: row;
+  }
+}
+.project-card div:nth-of-type(2) ul li {
   margin: 5px;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  padding: 3px;
+}
+.project-card div:nth-of-type(2) ul li img {
+  width: 30px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
 }/*# sourceMappingURL=styles.css.map */
